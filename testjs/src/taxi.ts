@@ -1,23 +1,24 @@
-// export const Taxi = () => 55
-
-export function TukTuk(runningDistance: number, waitTime: number) {
-    runningDistance = RoundNumber(runningDistance)
-    waitTime = RoundNumber(waitTime)
-    let calculate = (4 * runningDistance) + (1 * waitTime)
-    return calculate
-}
-
-function RoundNumber(value: number) {
-    value = value < 0 ? 0 : value
-    const integerPart = Math.floor(value);
-    const decimalPart = value - integerPart;
-
-  if (decimalPart >= 0.1 && decimalPart <= 0.4) {
-    return integerPart + 0.5;
-  } else if (decimalPart >= 0.6 && decimalPart <= 0.9) {
-    return integerPart + 1;
-  } else {
-    // For other cases, return the number itself or handle differently if needed
-    return Math.round(value);
+export const calculateFare = (distance: number, waitingTime: number) => {
+    return 4 * distance + waitingTime
   }
-}
+   
+  export const roundDistance = (distance: number) => {
+    return Math.ceil(distance * 2) / 2
+  }
+   
+  export const roundWaitingTime = (waitingTime: number) => {
+    return Math.ceil(waitingTime)
+  }
+   
+  export const fare = (distance: number, waitingTime: number) => {
+    return calculateFare(roundDistance(distance), roundWaitingTime(waitingTime))
+  }
+
+  export const calculateTotalFare = (distance: number, waitingTime: number) => {
+    let totalFare = fare(distance, waitingTime)
+    return isReachMinimumFare(totalFare) ? totalFare : 35
+  }
+
+  export const isReachMinimumFare = (fare: number) => {
+    return fare > 35
+  }
