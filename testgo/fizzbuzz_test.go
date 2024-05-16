@@ -13,7 +13,7 @@ func TestFizzBuzzShouldReturn1WhenInput1(t *testing.T) {
 	}
 }
 
-func TestFizzBuzzShouldReturn1WhenInput2(t *testing.T) {
+func TestFizzBuzzShouldReturn2WhenInput2(t *testing.T) {
 	input := 2
 
 	got := FizzBuzz(input)
@@ -24,7 +24,7 @@ func TestFizzBuzzShouldReturn1WhenInput2(t *testing.T) {
 	}
 }
 
-func TestFizzBuzzShouldReturn1WhenInput3(t *testing.T) {
+func TestFizzBuzzShouldReturnFizzWhenInput3(t *testing.T) {
 	input := 3
 
 	got := FizzBuzz(input)
@@ -35,7 +35,7 @@ func TestFizzBuzzShouldReturn1WhenInput3(t *testing.T) {
 	}
 }
 
-func TestFizzBuzzShouldReturn1WhenInput4(t *testing.T) {
+func TestFizzBuzzShouldReturn4WhenInput4(t *testing.T) {
 	input := 4
 
 	got := FizzBuzz(input)
@@ -47,7 +47,7 @@ func TestFizzBuzzShouldReturn1WhenInput4(t *testing.T) {
 	}
 }
 
-func TestFizzBuzzShouldReturn1WhenInput5(t *testing.T) {
+func TestFizzBuzzShouldReturnBuzzWhenInput5(t *testing.T) {
 	input := 5
 
 	got := FizzBuzz(input)
@@ -59,7 +59,7 @@ func TestFizzBuzzShouldReturn1WhenInput5(t *testing.T) {
 	}
 }
 
-func TestFizzBuzzShouldReturn1WhenInput6(t *testing.T) {
+func TestFizzBuzzShouldReturnFizzWhenInput6(t *testing.T) {
 	input := 6
 
 	got := FizzBuzz(input)
@@ -71,7 +71,7 @@ func TestFizzBuzzShouldReturn1WhenInput6(t *testing.T) {
 	}
 }
 
-func TestFizzBuzzShouldReturn1WhenInput7(t *testing.T) {
+func TestFizzBuzzShouldReturn7WhenInput7(t *testing.T) {
 	input := 7
 
 	got := FizzBuzz(input)
@@ -83,7 +83,7 @@ func TestFizzBuzzShouldReturn1WhenInput7(t *testing.T) {
 	}
 }
 
-func TestFizzBuzzShouldReturn1WhenInput8(t *testing.T) {
+func TestFizzBuzzShouldReturn8WhenInput8(t *testing.T) {
 	input := 8
 
 	got := FizzBuzz(input)
@@ -95,7 +95,7 @@ func TestFizzBuzzShouldReturn1WhenInput8(t *testing.T) {
 	}
 }
 
-func TestFizzBuzzShouldReturn1WhenInput9(t *testing.T) {
+func TestFizzBuzzShouldReturnFizzWhenInput9(t *testing.T) {
 	input := 9
 
 	got := FizzBuzz(input)
@@ -107,12 +107,24 @@ func TestFizzBuzzShouldReturn1WhenInput9(t *testing.T) {
 	}
 }
 
-func TestFizzBuzzShouldReturn1WhenInput10(t *testing.T) {
+func TestFizzBuzzShouldReturnBuzzWhenInput10(t *testing.T) {
 	input := 10
 
 	got := FizzBuzz(input)
 
 	want := "Buzz"
+	if got != want {
+		t.Errorf("got %q but want %q", got, want)
+
+	}
+}
+
+func TestFizzBuzzShouldReturn11WhenInput11(t *testing.T) {
+	input := 11
+
+	got := FizzBuzz(input)
+
+	want := "11"
 	if got != want {
 		t.Errorf("got %q but want %q", got, want)
 
