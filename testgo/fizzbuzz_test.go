@@ -167,7 +167,7 @@ func TestFizzBuzzShouldReturn14WhenInput14(t *testing.T) {
 	}
 }
 
-func TestFizzBuzzShouldReturn15WhenInput15(t *testing.T) {
+func TestFizzBuzzShouldReturnFizzBuzzWhenInput15(t *testing.T) {
 	input := 15
 
 	got := FizzBuzz(input)
