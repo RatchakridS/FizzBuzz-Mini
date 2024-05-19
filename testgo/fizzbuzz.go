@@ -18,17 +18,17 @@ func FizzBuzzLv1(n int) string {
 	return strconv.Itoa(n)
 }
 
-func FizzBuzz(n int) string {
+func FizzBuzzLv2(n int) string {
 	result := ""
-	result += Fizz(n)
-	result += Buzz(n)
+	result += FizzLv2(n)
+	result += BuzzLv2(n)
 	if result == "" {
 		result += strconv.Itoa(n)
 	}
 	return result
 }
 
-func Fizz(n int) string {
+func FizzLv2(n int) string {
 	mapper := map[bool]string{
 		true:  "Fizz",
 		false: "",
@@ -36,7 +36,7 @@ func Fizz(n int) string {
 	return mapper[n%3 == 0]
 }
 
-func Buzz(n int) string {
+func BuzzLv2(n int) string {
 	mapper := map[bool]string{
 		true:  "Buzz",
 		false: "",
