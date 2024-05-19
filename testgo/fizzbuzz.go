@@ -4,6 +4,9 @@ import (
 	"strconv"
 )
 
+var fizz = "Fizz"
+var buzz = "Buzz"
+
 // ----------------- Lv1. -----------------
 
 func FizzBuzzLv1(n int) string {
@@ -44,3 +47,44 @@ func BuzzLv2(n int) string {
 	}
 	return mapper[n%5 == 0]
 }
+
+// ----------------- Lv3. -----------------
+
+func FizzBuzzImprove(n int) string {
+	value := strconv.Itoa(n)
+	n = RollingNumberInScope(n)
+	fizzBuzzConvention := map[int]string{
+		1:  value,
+		2:  value,
+		3:  fizz,
+		4:  value,
+		5:  buzz,
+		6:  fizz,
+		7:  value,
+		8:  value,
+		9:  fizz,
+		10: buzz,
+		11: value,
+		12: fizz,
+		13: value,
+		14: value,
+		15: fizz + buzz,
+	}
+
+	return fizzBuzzConvention[n]
+}
+
+func RollingNumberInScope(n int) int {
+	if n <= 15 {
+		return n
+	}
+	value := n % 15
+	if value == 0 {
+		return 15
+	}
+	return value
+}
+
+// func Level3(n int) string {
+
+// }
