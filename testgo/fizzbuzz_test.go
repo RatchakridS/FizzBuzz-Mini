@@ -57,7 +57,7 @@ func TestLv2(t *testing.T) {
 	for _, v := range inputList {
 		actual := FizzBuzzLv2(v)
 		expect := fizzBuzzConvention[v]
-		t.Run(fmt.Sprintf("%s%s%s%d", "lv1:ShouldReturn", expect, "WhenInput", v), func(t *testing.T) {
+		t.Run(fmt.Sprintf("%s%s%s%d", "lv2:ShouldReturn", expect, "WhenInput", v), func(t *testing.T) {
 			if expect != actual {
 				t.Errorf("got %q but want %q", actual, expect)
 			}
