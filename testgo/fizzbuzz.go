@@ -15,6 +15,7 @@ func FizzBuzz(n int) string {
 		10: "Buzz",
 		11: "11",
 		12: "Fizz",
+		13: "13",
 	}
 
 	return fizzBuzzConvention[n]
