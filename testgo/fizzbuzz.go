@@ -1,24 +1,84 @@
 package main
 
-func FizzBuzz(n int) string {
+import (
+	"strconv"
+)
 
+var fizz = "Fizz"
+var buzz = "Buzz"
+
+func FizzBuzzLv1(n int) string {
+	if n%15 == 0 {
+		return "FizzBuzz"
+	} else if n%5 == 0 {
+		return "Buzz"
+	} else if n%3 == 0 {
+		return "Fizz"
+	}
+	return strconv.Itoa(n)
+}
+
+func FizzBuzz(n int) string {
+	result := ""
+	result += Fizz(n)
+	result += Buzz(n)
+	if result == "" {
+		result += strconv.Itoa(n)
+	}
+	return result
+}
+
+func Fizz(n int) string {
+	mapper := map[bool]string{
+		true:  "Fizz",
+		false: "",
+	}
+	return mapper[n%3 == 0]
+}
+
+func Buzz(n int) string {
+	mapper := map[bool]string{
+		true:  "Buzz",
+		false: "",
+	}
+	return mapper[n%5 == 0]
+}
+
+func FizzBuzzImprove(n int) string {
+	value := strconv.Itoa(n)
+	n = RollingNumberInScope(n)
 	fizzBuzzConvention := map[int]string{
-		1:  "1",
-		2:  "2",
-		3:  "Fizz",
-		4:  "4",
-		5:  "Buzz",
-		6:  "Fizz",
-		7:  "7",
-		8:  "8",
-		9:  "Fizz",
-		10: "Buzz",
-		11: "11",
-		12: "Fizz",
-		13: "13",
-		14: "14",
-		15: "FizzBuzz",
+		1:  value,
+		2:  value,
+		3:  fizz,
+		4:  value,
+		5:  buzz,
+		6:  fizz,
+		7:  value,
+		8:  value,
+		9:  fizz,
+		10: buzz,
+		11: value,
+		12: fizz,
+		13: value,
+		14: value,
+		15: fizz + buzz,
 	}
 
 	return fizzBuzzConvention[n]
 }
+
+func RollingNumberInScope(n int) int {
+	if n <= 15 {
+		return n
+	}
+	value := n % 15
+	if value == 0 {
+		return 15
+	}
+	return value
+}
+
+// func Level3(n int) string {
+
+// }
