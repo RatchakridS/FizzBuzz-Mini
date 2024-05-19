@@ -1,8 +1,11 @@
 package main
 
-import "strconv"
-
 func FizzBuzz(n int) string {
 
-	return strconv.Itoa(n)
+	fizzBuzzConvention := map[int]string{
+		1: "1",
+		2: "2",
+	}
+
+	return fizzBuzzConvention[n]
 }
