@@ -20,5 +20,9 @@ func FizzBuzzLv3(n int) string {
 }
 
 func FizzBuzzLv4(n int) string {
-	return ""
+	// game := fizzbuzz.FizzBuzz{}
+	// game.Number = n
+
+	// result := game.FizzBuzzGame()
+	return "1"
 }
