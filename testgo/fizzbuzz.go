@@ -22,9 +22,8 @@ func FizzBuzzLv3(n int) string {
 }
 
 func FizzBuzzLv4(n int) string {
-	game := fizzbuzz.FizzBuzz{
-		Number: 1,
-	}
+	game := fizzbuzz.FizzBuzz{}
+	game.Number = 1
 
 	result := game.FizzBuzzGame()
 	return result

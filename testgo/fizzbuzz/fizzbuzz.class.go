@@ -31,3 +31,7 @@ func fizzBuzzCalculate(n int) int {
 
 	return 0
 }
+
+func (fz *FizzBuzz) SetNumber(n int) {
+	fz.Number = n
+}
