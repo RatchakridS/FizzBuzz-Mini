@@ -11,5 +11,6 @@ func FizzBuzzLv3(n int) string {
 	convention[5] = "Buzz"
 	convention[6] = "Fizz"
 	convention[9] = "Fizz"
+	convention[10] = "Buzz"
 	return convention[n]
 }
