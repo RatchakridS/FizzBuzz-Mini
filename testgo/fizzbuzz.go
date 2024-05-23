@@ -1,6 +1,10 @@
 package main
 
-import "strconv"
+import (
+	"strconv"
+
+	"github.com/AnuchitO/tests/testgo/fizzbuzz"
+)
 
 // ----------------- Lv3. -----------------
 
@@ -15,4 +19,13 @@ func FizzBuzzLv3(n int) string {
 	convention[12] = "Fizz"
 	convention[15] = "FizzBuzz"
 	return convention[n]
+}
+
+func FizzBuzzLv4(n int) string {
+	game := fizzbuzz.FizzBuzz{
+		Number: 1,
+	}
+
+	result := game.FizzBuzzGame()
+	return result
 }
