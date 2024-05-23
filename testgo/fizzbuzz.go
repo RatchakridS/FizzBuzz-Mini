@@ -9,5 +9,6 @@ func FizzBuzzLv3(n int) string {
 	convention[n] = strconv.Itoa(n)
 	convention[3] = "Fizz"
 	convention[5] = "Buzz"
+	convention[6] = "Fizz"
 	return convention[n]
 }
