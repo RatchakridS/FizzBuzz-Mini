@@ -21,6 +21,8 @@ func FizzBuzzLv3(n int) string {
 	return convention[n]
 }
 
+// ----------------- Lv4. -----------------
+
 func FizzBuzzLv4(n int) string {
 	game := fizzbuzz.FizzBuzz{}
 	game.Number = n
