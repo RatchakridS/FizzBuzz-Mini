@@ -23,18 +23,18 @@ var FIZZ_BUZZ_CONVENTION = map[int]string{
 	15: "FizzBuzz",
 }
 
-// func TestLv3(t *testing.T) {
-// 	inputList := []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15}
-// 	for _, v := range inputList {
-// 		actual := FizzBuzzLv3(v)
-// 		expect := FIZZ_BUZZ_CONVENTION[v]
-// 		t.Run(fmt.Sprintf("%s%s%s%d", "lv3:ShouldReturn", expect, "WhenInput", v), func(t *testing.T) {
-// 			if expect != actual {
-// 				t.Errorf("got %q but want %q", actual, expect)
-// 			}
-// 		})
-// 	}
-// }
+func TestLv3(t *testing.T) {
+	inputList := []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15}
+	for _, v := range inputList {
+		actual := FizzBuzzLv3(v)
+		expect := FIZZ_BUZZ_CONVENTION[v]
+		t.Run(fmt.Sprintf("%s%s%s%d", "lv3:ShouldReturn", expect, "WhenInput", v), func(t *testing.T) {
+			if expect != actual {
+				t.Errorf("got %q but want %q", actual, expect)
+			}
+		})
+	}
+}
 
 func TestLv4(t *testing.T) {
 	inputList := []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15}
