@@ -37,7 +37,7 @@ var FIZZ_BUZZ_CONVENTION = map[int]string{
 // }
 
 func TestLv4(t *testing.T) {
-	inputList := []int{1, 2}
+	inputList := []int{1, 2, 3}
 	for _, v := range inputList {
 		actual := FizzBuzzLv4(v)
 		expect := FIZZ_BUZZ_CONVENTION[v]
